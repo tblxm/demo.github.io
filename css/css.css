@@ -1,0 +1,299 @@
+
+
+body{
+  margin: 0;
+  padding:0;
+  cursor: url(https://cdn.jsdelivr.net/gh/moezx/cdn@3.1.9/img/Sakura/cursor/normal.cur),auto;
+  /* text-shadow: 0px 0px 1px rgba(0,0,0,.1); */
+}
+a{
+  text-decoration: none;
+  color:#515151;
+}
+ul{
+  float: left;
+  padding:0;
+  margin:0;
+}
+li{
+  float:left;
+  list-style:none;
+  /* 初始化 */
+}
+.bgBox{
+  width: 100%;
+}
+/* 完成ul标签横向排列和去掉标点 */
+.header{
+  width:100%;
+  height: 100vh;
+  background-size:cover;
+  background: url(../image/bg.jpeg) no-repeat center;
+  overflow: hidden;
+  position: relative;
+}
+.head_body{
+  width:100vw;
+  height: 100vh;
+  background: rgba(63, 63, 65, 0.5);
+}
+.head:hover{
+  background-color: #fff;
+}
+.head:hover .head_menu_{
+  visibility: visible; /* 和display：none相似，只是一个是不存在一个是遮盖 */
+}
+
+.head{
+  width:100vw;
+  height: 85px;
+  display: flex;
+  justify-content: space-around; /* 环绕 */
+  align-items: center; /* 居中 */
+  position: fixed;
+}
+
+.head_logo{
+  flex:1; /* 按比例分配瓜分父系，省略justify-content:center和space-between */
+}
+img{
+  width:6vw; /* 窗口100vw */
+  height: 40px;
+  padding-left: 30px;
+}
+/* logo样式结束 */
+
+.head_menu{
+  flex:4;
+  display: flex;
+  justify-content: center;
+ 
+}
+.head_menu_{
+  width:90%;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  visibility: hidden;
+}
+.head_btn{
+  flex:1;
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 30px;
+}
+.head_btn_{
+ width:50%;
+ height: 100%;
+ display: flex;
+ justify-content: space-around;
+}
+
+/* 一部分的main部分 */
+.main{
+  width:50vw;
+  height: 25vh;
+  position:absolute;
+  top:40%;
+  left:25.5%;
+}
+.main_box1{
+  text-align: center;
+}
+.main_box1_text{
+  font-size:50px;
+  color:#fff;
+  margin: 0;
+  padding-bottom: 20px;
+}
+.main_box2{
+  background: rgba(12, 12, 12, 0.411);
+  height: 60%;
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap; /* 让弹性元素在必要是换行 */
+  justify-content: center;
+}
+.main_box2_infoBox{
+  width:90%;
+  display: flex;
+  justify-content: center;
+}
+.info_text{
+  font-size:19px;
+  color:#fff;
+  font-weight: 500;
+  padding-top:15px;
+  margin: 0;
+}
+.info{
+  width:90%;
+  display: flex;
+  justify-content: space-around;
+}
+/* main结束 */
+
+/* 第一部分尾部开始 */
+.footer{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width:100vw;
+  height: 100px;
+  background: url(../image/head_btm1.png);
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+}
+.footer1{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width:100vw;
+  height: 65px;
+  background:url(../image/head_btm.png);
+  overflow: hidden;
+}
+/* .down1{
+  width:3em;
+  height: 50px;
+  position: absolute;
+  top:0;
+  left:50%;
+} */
+
+.down{
+  animation: myMove 2s infinite;
+  -webkit-animation: myMove 2s infinite; /* 动画属性 */
+  top:0;
+  position: absolute;
+}
+@keyframes myMove{
+  0% {
+    top: 0px;
+}
+50%{
+  top:5px
+}
+100% {
+    top: 0px;
+}
+} /* 元素移动 */
+
+/* main部分开始 */
+.mainBox{
+  width:100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  padding:0;
+  margin:0 auto;
+}
+.mainBody{
+  width:50%;
+  height: 33%;
+  margin-top:50px;
+}
+.mainBodyBox1{
+  width:100%;
+  height: 100%;
+  margin-bottom: 100px;
+}
+.mainBodyBox1Title{
+  padding-left: 15px;
+  border-bottom: 1px dotted #666;
+}
+.mainBodyBox1Main{
+  margin-top:25px;
+  width:100%;
+  height:90%;
+  display: flex;
+  justify-content: center;
+  box-shadow: darkgrey 0px 0px 15px 5px;
+  border-radius: 25px;
+  padding:15px;
+}
+/* .mainBodyBox1Main:hover{
+  box-shadow: darkgrey 0px 0px 30px 5px;//边框内阴影
+} */
+.boxMainPage{
+  width:45%;
+  height: 75%;
+  margin-top:20px;
+  padding:18px;
+}
+.page{
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+}
+.boxMainImg{
+  width:50%;
+  height:90%;
+  margin-top:20px;
+}
+.boxMainImg img{
+  width:100%;
+  height: 100%;
+  padding:0;
+}
+.phone_head{
+  display: none;
+}
+.pc_head{
+  display: block;
+  width:100vw;
+  height: 85px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: fixed;
+}
+
+/* 手机端适配 */
+@media (max-device-width: 430px){
+  .pc_head{
+    display: none;
+  }
+  .phone_head{
+    width:100%;
+    height: 80%;
+    display: block;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left:15px;
+    padding-right: 15px;
+  }
+  .main_box1_text{
+    font-size:25px;
+  }
+  .main_box2{
+    display: none;
+  }
+
+  /* main部分的手机端 */
+  .mainBody{
+    width:100%;
+    margin-top:80px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .mainBodyBox1{
+    width:90%;
+    height: 250px;
+  }
+  .boxMainImg{
+    width:180px;
+    height: 180px;
+  }
+  .boxMainImg img{
+    border-radius: 50%;
+  }
+  .mainBodyBox1Main{
+    width:80%;
+    margin:20px;
+  }
+}
